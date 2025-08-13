@@ -438,6 +438,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .tech-tag {
@@ -450,9 +451,147 @@
             border: 1px solid #e9ecef;
         }
 
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-btn {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .project-btn:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+        }
+
+        /* Recommendations Section */
+        .recommendations {
+            background: #fafbfc;
+        }
+
+        .recommendations-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .recommendations-slider {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .recommendation-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.6s ease;
+        }
+
+        .recommendation-card.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .recommendation-card.prev {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .recommendation-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #5a6c7d;
+            position: relative;
+        }
+
+        .recommendation-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: #2c3e50;
+            position: absolute;
+            top: -1rem;
+            left: -2rem;
+            opacity: 0.3;
+        }
+
+        .recommendation-text::after {
+            content: '"';
+            font-size: 4rem;
+            color: #2c3e50;
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            opacity: 0.3;
+        }
+
+        .recommendation-author {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .recommendation-position {
+            color: #6c757d;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2c3e50;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: #5a6c7d;
+        }
+
         /* Certifications Section */
         .certifications {
-            background: #fafbfc;
+            background: #ffffff;
         }
 
         .cert-grid {
@@ -464,7 +603,7 @@
         }
 
         .cert-card {
-            background: white;
+            background: #fafbfc;
             padding: 2.5rem;
             border-radius: 12px;
             text-align: center;
@@ -502,6 +641,10 @@
         }
 
         /* Contact Section */
+        .contact {
+            background: #fafbfc;
+        }
+
         .contact-content {
             max-width: 800px;
             margin: 0 auto;
@@ -523,7 +666,7 @@
         }
 
         .contact-method {
-            background: #fafbfc;
+            background: white;
             padding: 2.5rem;
             border-radius: 12px;
             border: 1px solid #e9ecef;
@@ -657,6 +800,18 @@
                 max-width: 280px;
                 text-align: center;
             }
+
+            .recommendations-slider {
+                height: 450px;
+            }
+
+            .recommendation-card {
+                padding: 2rem;
+            }
+
+            .recommendation-text {
+                font-size: 1.1rem;
+            }
         }
 
         /* Smooth scrolling */
@@ -691,6 +846,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -740,16 +896,16 @@
             <div class="about-content">
                 <p class="about-text">
                     I'm a results-driven Project Manager and Business Analyst with over 6 years of experience transforming 
-                    business operations through strategic analysis and innovative automation solutions. Currently based in 
-                    Hamilton, Ontario, I specialize in RPA deployments, cross-functional team leadership, and creating 
-                    data-driven solutions that deliver measurable business impact.
+                    business operations through strategic RPA deployments and automation solutions. Currently based in 
+                    Hamilton, Ontario, I specialize in leading cross-functional teams, managing end-to-end RPA implementations, 
+                    and delivering data-driven solutions that achieve measurable business impact with proven efficiency improvements of up to 60%.
                 </p>
                 
                 <div class="about-highlights">
                     <div class="highlight">
                         <div class="highlight-icon">⚡</div>
-                        <h3>Process Optimization</h3>
-                        <p>Expert in identifying inefficiencies and implementing automation solutions that reduce manual effort by up to 60%</p>
+                        <h3>RPA Project Management</h3>
+                        <p>Expert in leading end-to-end RPA deployments with 99% system uptime and 60% efficiency improvements across enterprise projects</p>
                     </div>
                     <div class="highlight">
                         <div class="highlight-icon">👥</div>
@@ -758,8 +914,8 @@
                     </div>
                     <div class="highlight">
                         <div class="highlight-icon">📊</div>
-                        <h3>Data-Driven Insights</h3>
-                        <p>Proficient in creating interactive dashboards and analytics that enhance executive decision-making processes</p>
+                        <h3>Business Analysis</h3>
+                        <p>Proficient in creating interactive dashboards and analytics that enhance executive decision-making and project tracking</p>
                     </div>
                 </div>
             </div>
@@ -837,14 +993,37 @@
 
         <!-- Projects Section -->
         <section id="projects" class="section">
-            <h2>Featured Projects</h2>
+            <h2>Featured RPA & Project Management Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Hamilton Street Railway Analysis</h3>
+                        <h3 class="project-title">Travel Port RPA Implementation</h3>
                         <p class="project-description">
-                            Comprehensive data analysis of Hamilton's public transit system to identify inefficiencies and propose 
-                            evidence-based solutions for reducing commute times and improving service delivery.
+                            Led comprehensive RPA deployment for travel industry client, managing cross-functional teams and ensuring 
+                            seamless integration. Delivered project on time with 24/7 support coordination during critical phases, 
+                            resulting in significant operational efficiency improvements.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RPA</span>
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Stakeholder Management</span>
+                            <span class="tech-tag">24/7 Support</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('travelport-case-study')">
+                                📄 View Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Hamilton Transit System Analysis</h3>
+                        <p class="project-description">
+                            Comprehensive data analysis project utilizing advanced analytics to identify inefficiencies in Hamilton's 
+                            public transit system. Proposed evidence-based automation solutions for reducing commute times and improving 
+                            service delivery through process optimization.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Tableau</span>
@@ -852,15 +1031,21 @@
                             <span class="tech-tag">Power BI</span>
                             <span class="tech-tag">ArcGIS</span>
                         </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('transit-analysis')">
+                                📊 View Analysis Report
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Engineering Scheduling Optimization</h3>
+                        <h3 class="project-title">Mohawk College Scheduling Framework</h3>
                         <p class="project-description">
-                            Designed and implemented a standardized scheduling framework for Mohawk College's engineering department, 
-                            incorporating automation techniques that increased operational efficiency by 40%.
+                            Project managed and designed a standardized scheduling framework for Mohawk College's engineering department. 
+                            Incorporated RPA and automation techniques that increased operational efficiency by 40%, with full stakeholder 
+                            engagement and change management.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">MS Project</span>
@@ -868,23 +1053,108 @@
                             <span class="tech-tag">Lucid Chart</span>
                             <span class="tech-tag">Excel VBA</span>
                         </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('scheduling-framework')">
+                                📁 View Project Files
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-content">
-                        <h3 class="project-title">Mental Health Services Gap Analysis</h3>
+                        <h3 class="project-title">HEAD Data Competition Project</h3>
                         <p class="project-description">
-                            Conducted stakeholder interviews and facilitated workshops to identify service gaps in mental health support, 
-                            delivering comprehensive recommendations for improved service delivery and student outcomes.
+                            Led business analysis initiative in competitive environment, demonstrating exceptional analytical skills 
+                            and data storytelling capabilities. Managed project timeline, stakeholder communication, and delivered 
+                            compelling insights that showcased advanced problem-solving abilities.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Miro</span>
-                            <span class="tech-tag">Jira</span>
-                            <span class="tech-tag">Confluence</span>
-                            <span class="tech-tag">Process Mapping</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Business Intelligence</span>
+                            <span class="tech-tag">Presentation</span>
+                            <span class="tech-tag">Project Leadership</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('head-competition')">
+                                🎯 View Presentation
+                            </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="section recommendations">
+            <h2>Recommendations</h2>
+            <div class="recommendations-container">
+                <div class="recommendations-slider">
+                    <div class="recommendation-card active">
+                        <div class="recommendation-text">
+                            I had the privilege of working closely with Ishant Tyagi during the successful launch of the Project Management Student Club at Mohawk College. His strategic thinking and attention to detail helped us navigate challenges seamlessly, while his proactive approach ensured that stakeholder engagement and event execution exceeded expectations.
+                        </div>
+                        <div class="recommendation-author">Ekene Echezona, IIBA-ECBA, BIA, B.Eng</div>
+                        <div class="recommendation-position">Project Manager | Business Analyst | ECBA</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant is someone who consistently goes above and beyond in everything he does. His ability to analyze complex situations, tell compelling stories with data, and draw meaningful insights was exceptional in the HEAD Data Competition. He's more than equipped with the analytical skills needed to break down problems and provide effective solutions.
+                        </div>
+                        <div class="recommendation-author">Sukonta (Annie) Geratiboonmanon CSM, PMP</div>
+                        <div class="recommendation-position">Scrum Master | Agile Coach | IT Project Manager</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            It was a pleasure working with Ishant on Travel Port project, he is an outstanding team member. He brings a rare combination of technical expertise, problem-solving skills, and a collaborative spirit. He consistently delivered the work on or before deadline and his willingness to go the extra mile is commendable.
+                        </div>
+                        <div class="recommendation-author">Mayank Batra</div>
+                        <div class="recommendation-position">Test Manager at Tata Consultancy Services</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant made a lasting and memorable impact during his tenure on our support team. He demonstrated reliability and accountability during our after hours deployments, was the spokesman for the team when they noticed trends on incidents. His leadership qualities shined when the opportunity opened up for him to be in the spotlight.
+                        </div>
+                        <div class="recommendation-author">Betheal Ande</div>
+                        <div class="recommendation-position">Sr. Scrum Master at Kroger</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant supported the applications I worked on in my first few years at Kroger. Ishant is by far the most thorough and reliable person I've ever worked with on application support. He was there with me any time of day, whether it was 3am my time or 3am his. Any team would be lucky to have him!
+                        </div>
+                        <div class="recommendation-author">Kait Ann Matthey</div>
+                        <div class="recommendation-position">Full Stack Software Engineer, Technical Lead</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant proved to be one of my top performers - naturally grasping the concepts of leadership. Also, Ishant boldly attended Toastmaster meetings to improve his communication skills. In addition to a clear moral compass, strong work ethic and his quest for excellence, Ishant has a great sense of humour.
+                        </div>
+                        <div class="recommendation-author">Mark Bonner B.Sc. M.Sc. PMP</div>
+                        <div class="recommendation-position">Teacher, Community Advocate, Project Artist</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant is a dedicated and capable person who would be an awesome asset to any organization. I've been impressed at how he engages himself deeply in the work that he does and is successful at what he puts his mind to. I am happy to recommend him.
+                        </div>
+                        <div class="recommendation-author">Chris Spraakman</div>
+                        <div class="recommendation-position">Professor, Business Analysis and Analytics, Mohawk College</div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <div class="dot active" onclick="currentSlide(1)"></div>
+                    <div class="dot" onclick="currentSlide(2)"></div>
+                    <div class="dot" onclick="currentSlide(3)"></div>
+                    <div class="dot" onclick="currentSlide(4)"></div>
+                    <div class="dot" onclick="currentSlide(5)"></div>
+                    <div class="dot" onclick="currentSlide(6)"></div>
+                    <div class="dot" onclick="currentSlide(7)"></div>
                 </div>
             </div>
         </section>
@@ -917,24 +1187,24 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section">
+        <section id="contact" class="section contact">
             <h2>Let's Connect</h2>
             <div class="contact-content">
                 <p class="contact-intro">
-                    I'm always interested in discussing new opportunities, innovative projects, and ways to drive 
-                    business transformation through strategic analysis and automation solutions.
+                    I'm always interested in discussing new opportunities, innovative RPA projects, and ways to drive 
+                    business transformation through strategic project management and automation solutions.
                 </p>
                 
                 <div class="contact-methods">
                     <div class="contact-method">
                         <div class="contact-icon">📧</div>
                         <h3>Email</h3>
-                        <p>Ishant.tyagi@mohawkcollege.ca</p>
+                        <p>ishanttyagi72@gmail.com</p>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon">📱</div>
-                        <h3>Phone</h3>
-                        <p>(647) 923-2829</p>
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
                     </div>
                     <div class="contact-method">
                         <div class="contact-icon">📍</div>
@@ -944,8 +1214,8 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/ishant-tyagi" class="social-link" title="LinkedIn">💼</a>
-                    <a href="mailto:Ishant.tyagi@mohawkcollege.ca" class="social-link" title="Email">📧</a>
+                    <a href="https://www.linkedin.com/in/ishant-tyagi" class="social-link" title="LinkedIn">💼</a>
+                    <a href="mailto:ishanttyagi72@gmail.com" class="social-link" title="Email">📧</a>
                     <a href="https://github.com/ishant-tyagi" class="social-link" title="GitHub">💻</a>
                 </div>
             </div>
@@ -958,6 +1228,85 @@
     </footer>
 
     <script>
+        // Recommendations Slider
+        let slideIndex = 1;
+        let slideInterval;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("recommendation-card");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active", "prev");
+                if (i < slideIndex - 1) {
+                    slides[i].classList.add("prev");
+                }
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            slideIndex = n;
+            showSlides(slideIndex);
+            startSlideShow();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // File download functionality
+        function downloadFile(fileType) {
+            // Replace these URLs with your actual file URLs hosted on GitHub or cloud storage
+            const fileUrls = {
+                'resume': '#', // Add your resume URL here
+                'travelport-presentation': '#', // Add Travel Port PPT URL
+                'travelport-case-study': '#', // Add case study PDF URL
+                'transit-report': '#', // Add transit analysis PDF URL
+                'transit-analysis': '#', // Add transit analysis URL
+                'scheduling-docs': '#', // Add scheduling framework docs URL
+                'scheduling-framework': '#', // Add scheduling project URL
+                'head-presentation': '#', // Add HEAD competition PPT URL
+                'head-competition': '#', // Add HEAD competition URL
+                'certifications': '#' // Add certifications PDF URL
+            };
+            
+            if (fileUrls[fileType] && fileUrls[fileType] !== '#') {
+                window.open(fileUrls[fileType], '_blank');
+            } else {
+                // Show a professional message with contact info
+                const fileNames = {
+                    'resume': 'Resume',
+                    'travelport-presentation': 'Travel Port Project Presentation',
+                    'travelport-case-study': 'Travel Port Case Study',
+                    'transit-report': 'Hamilton Transit Analysis Report',
+                    'transit-analysis': 'Transit System Analysis',
+                    'scheduling-docs': 'Scheduling Framework Documentation',
+                    'scheduling-framework': 'Mohawk College Scheduling Project',
+                    'head-presentation': 'HEAD Data Competition Presentation',
+                    'head-competition': 'HEAD Competition Project',
+                    'certifications': 'Professional Certifications'
+                };
+                
+                alert(`${fileNames[fileType] || 'Document'} - Please contact me directly at ishanttyagi72@gmail.com or connect with me on LinkedIn for access to this document.`);
+            }
+        }
+
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1070,6 +1419,12 @@
         if (heroStats) {
             statsObserver.observe(heroStats);
         }
+
+        // Initialize slider
+        document.addEventListener('DOMContentLoaded', function() {
+            showSlides(slideIndex);
+            startSlideShow();
+        });
     </script>
 </body>
 </html>
