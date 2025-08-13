@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishant Tyagi - Project Manager & Business Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fefefe;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fefefe;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(254, 254, 254, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #5a6c7d;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: #2c3e50;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 3rem 100px;
+            background: #fefefe;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #f8f9fa;
+            color: #6c757d;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            letter-spacing: 0.5px;
+            border: 1px solid #e9ecef;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: #5a6c7d;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: #6c757d;
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.15);
+        }
+
+        .btn-outline {
+            border: 2px solid #dee2e6;
+            color: #6c757d;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: #2c3e50;
+            color: #2c3e50;
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 3rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: #2c3e50;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* About Section */
+        .about {
+            background: #fafbfc;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #5a6c7d;
+            margin-bottom: 3rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .highlight {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .highlight-icon {
+            width: 60px;
+            height: 60px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .highlight h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .highlight p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+        }
+
+        .skill-category {
+            background: #fafbfc;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .skill-item:last-child {
+            border-bottom: none;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #fafbfc;
+        }
+
+        .experience-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experience-item {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            flex: 1;
+        }
+
+        .job-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #5a6c7d;
+            font-weight: 500;
+        }
+
+        .duration {
+            color: #6c757d;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .achievements {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievements li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+
+        .achievements li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-content {
+            padding: 2.5rem;
+        }
+
+        .project-title {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #5a6c7d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: #f8f9fa;
+            color: #5a6c7d;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+        }
+
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-btn {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .project-btn:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(44, 62, 80, 0.3);
+        }
+
+        /* Recommendations Section */
+        .recommendations {
+            background: #fafbfc;
+        }
+
+        .recommendations-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .recommendations-slider {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            background: white;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .recommendation-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.6s ease;
+        }
+
+        .recommendation-card.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .recommendation-card.prev {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .recommendation-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #5a6c7d;
+            position: relative;
+        }
+
+        .recommendation-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: #2c3e50;
+            position: absolute;
+            top: -1rem;
+            left: -2rem;
+            opacity: 0.3;
+        }
+
+        .recommendation-text::after {
+            content: '"';
+            font-size: 4rem;
+            color: #2c3e50;
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            opacity: 0.3;
+        }
+
+        .recommendation-author {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .recommendation-position {
+            color: #6c757d;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2c3e50;
+            transform: scale(1.2);
+        }
+
+        .dot:hover {
+            background: #5a6c7d;
+        }
+
+        /* Certifications Section */
+        .certifications {
+            background: #ffffff;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .cert-card {
+            background: #fafbfc;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-icon {
+            width: 60px;
+            height: 60px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .cert-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .cert-org {
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #fafbfc;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-intro {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-method {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .contact-method h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .contact-method p {
+            color: #5a6c7d;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            background: #34495e;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 2rem 80px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .section {
+                padding: 80px 2rem;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .duration {
+                text-align: left;
+                margin-top: 0.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+
+            .recommendations-slider {
+                height: 450px;
+            }
+
+            .recommendation-card {
+                padding: 2rem;
+            }
+
+            .recommendation-text {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Professional touches */
+        ::selection {
+            background: rgba(44, 62, 80, 0.1);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Ishant Tyagi</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">Available for New Opportunities</div>
+                <h1>Ishant Tyagi</h1>
+                <p class="subtitle">Project Manager & Business Analyst</p>
+                <p class="description">
+                    Experienced professional specializing in RPA deployments, process automation, and stakeholder engagement. 
+                    Proven track record of delivering 60% efficiency improvements and 99% system uptime across enterprise projects.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#experience" class="btn btn-outline">View Experience</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Stakeholder Workshops</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">Efficiency Gains</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">System Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <h2>About</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    I'm a results-driven Project Manager and Business Analyst with over 6 years of experience transforming 
+                    business operations through strategic RPA deployments and automation solutions. Currently based in 
+                    Hamilton, Ontario, I specialize in leading cross-functional teams, managing end-to-end RPA implementations, 
+                    and delivering data-driven solutions that achieve measurable business impact with proven efficiency improvements of up to 60%.
+                </p>
+                
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <div class="highlight-icon">⚡</div>
+                        <h3>RPA Project Management</h3>
+                        <p>Expert in leading end-to-end RPA deployments with 99% system uptime and 60% efficiency improvements across enterprise projects</p>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-icon">👥</div>
+                        <h3>Stakeholder Management</h3>
+                        <p>Led 25+ workshops and discovery sessions, facilitating collaboration between business units and technical teams</p>
+                    </div>
+                    <div class="highlight">
+                        <div class="highlight-icon">📊</div>
+                        <h3>Business Analysis</h3>
+                        <p>Proficient in creating interactive dashboards and analytics that enhance executive decision-making and project tracking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience">
+            <h2>Professional Experience</h2>
+            <div class="experience-container">
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title">Project Manager / Automation Analyst</h3>
+                            <div class="company">Zagitas, Toronto, Canada</div>
+                        </div>
+                        <div class="duration">April 2025 – Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Spearheaded 5+ RPA product deployments across client operations, reducing manual effort by 60% and achieving 99% bot uptime within SLA targets</li>
+                        <li>Led over 25 stakeholder workshops and discovery sessions to identify automation opportunities and gather business requirements</li>
+                        <li>Facilitated cross-functional collaboration between business units and technical teams, ensuring end-to-end visibility on requirements and delivery timelines</li>
+                        <li>Developed comprehensive test plans and validation criteria, resolving 100+ issues pre-launch to ensure smooth rollout</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title">Senior Student Life Ambassador</h3>
+                            <div class="company">Mohawk College, Hamilton, Canada</div>
+                        </div>
+                        <div class="duration">Aug 2024 – April 2025</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Led event planning and execution for diverse student engagement initiatives contributing to an inclusive campus environment</li>
+                        <li>Fostered mentorship opportunities and helped first-year students transition smoothly to college life</li>
+                        <li>Analyzed and reported on campus engagement statistics, providing insights to optimize future initiatives</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title">Project Coordinator / Technical Team Lead</h3>
+                            <div class="company">Tata Consultancy Services, India</div>
+                        </div>
+                        <div class="duration">June 2022 – July 2023</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Conducted gap analysis and presented recommendations that improved business processes by 20% per quarter</li>
+                        <li>Developed comprehensive UAT plans, achieving 100% project completion on schedule and accelerating deployments by 35%</li>
+                        <li>Triaged and resolved 50+ production issues, cutting system downtime by 40% and boosting overall reliability</li>
+                        <li>Developed interactive dashboards in Tableau and PowerBI for executive-level presentations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3 class="job-title">Technical Team Lead / Application Specialist</h3>
+                            <div class="company">Tata Consultancy Services, India</div>
+                        </div>
+                        <div class="duration">Oct 2017 – May 2022</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Led stakeholder engagement and requirement gathering, achieving 91% accuracy rate in initial software releases</li>
+                        <li>Enhanced application performance and uptime, reducing downtime by 85% through proactive monitoring and automation</li>
+                        <li>Managed product backlogs and release cycles, improving project efficiency by 40% and supporting continuous delivery</li>
+                        <li>Performed end-to-end quality assurance on 10+ applications, identifying 500+ defects and ensuring regulatory compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Featured RPA & Project Management Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Travel Port RPA Implementation</h3>
+                        <p class="project-description">
+                            Led comprehensive RPA deployment for travel industry client, managing cross-functional teams and ensuring 
+                            seamless integration. Delivered project on time with 24/7 support coordination during critical phases, 
+                            resulting in significant operational efficiency improvements.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">RPA</span>
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Stakeholder Management</span>
+                            <span class="tech-tag">24/7 Support</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('travelport-case-study')">
+                                📄 View Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Hamilton Transit System Analysis</h3>
+                        <p class="project-description">
+                            Comprehensive data analysis project utilizing advanced analytics to identify inefficiencies in Hamilton's 
+                            public transit system. Proposed evidence-based automation solutions for reducing commute times and improving 
+                            service delivery through process optimization.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">ArcGIS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('transit-analysis')">
+                                📊 View Analysis Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">Mohawk College Scheduling Framework</h3>
+                        <p class="project-description">
+                            Project managed and designed a standardized scheduling framework for Mohawk College's engineering department. 
+                            Incorporated RPA and automation techniques that increased operational efficiency by 40%, with full stakeholder 
+                            engagement and change management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MS Project</span>
+                            <span class="tech-tag">Asana</span>
+                            <span class="tech-tag">Lucid Chart</span>
+                            <span class="tech-tag">Excel VBA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('scheduling-framework')">
+                                📁 View Project Files
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3 class="project-title">HEAD Data Competition Project</h3>
+                        <p class="project-description">
+                            Led business analysis initiative in competitive environment, demonstrating exceptional analytical skills 
+                            and data storytelling capabilities. Managed project timeline, stakeholder communication, and delivered 
+                            compelling insights that showcased advanced problem-solving abilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Business Intelligence</span>
+                            <span class="tech-tag">Presentation</span>
+                            <span class="tech-tag">Project Leadership</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-btn" onclick="downloadFile('head-competition')">
+                                🎯 View Presentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="section recommendations">
+            <h2>Recommendations</h2>
+            <div class="recommendations-container">
+                <div class="recommendations-slider">
+                    <div class="recommendation-card active">
+                        <div class="recommendation-text">
+                            I had the privilege of working closely with Ishant Tyagi during the successful launch of the Project Management Student Club at Mohawk College. His strategic thinking and attention to detail helped us navigate challenges seamlessly, while his proactive approach ensured that stakeholder engagement and event execution exceeded expectations.
+                        </div>
+                        <div class="recommendation-author">Ekene Echezona, IIBA-ECBA, BIA, B.Eng</div>
+                        <div class="recommendation-position">Project Manager | Business Analyst | ECBA</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant is someone who consistently goes above and beyond in everything he does. His ability to analyze complex situations, tell compelling stories with data, and draw meaningful insights was exceptional in the HEAD Data Competition. He's more than equipped with the analytical skills needed to break down problems and provide effective solutions.
+                        </div>
+                        <div class="recommendation-author">Sukonta (Annie) Geratiboonmanon CSM, PMP</div>
+                        <div class="recommendation-position">Scrum Master | Agile Coach | IT Project Manager</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            It was a pleasure working with Ishant on Travel Port project, he is an outstanding team member. He brings a rare combination of technical expertise, problem-solving skills, and a collaborative spirit. He consistently delivered the work on or before deadline and his willingness to go the extra mile is commendable.
+                        </div>
+                        <div class="recommendation-author">Mayank Batra</div>
+                        <div class="recommendation-position">Test Manager at Tata Consultancy Services</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant made a lasting and memorable impact during his tenure on our support team. He demonstrated reliability and accountability during our after hours deployments, was the spokesman for the team when they noticed trends on incidents. His leadership qualities shined when the opportunity opened up for him to be in the spotlight.
+                        </div>
+                        <div class="recommendation-author">Betheal Ande</div>
+                        <div class="recommendation-position">Sr. Scrum Master at Kroger</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant supported the applications I worked on in my first few years at Kroger. Ishant is by far the most thorough and reliable person I've ever worked with on application support. He was there with me any time of day, whether it was 3am my time or 3am his. Any team would be lucky to have him!
+                        </div>
+                        <div class="recommendation-author">Kait Ann Matthey</div>
+                        <div class="recommendation-position">Full Stack Software Engineer, Technical Lead</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant proved to be one of my top performers - naturally grasping the concepts of leadership. Also, Ishant boldly attended Toastmaster meetings to improve his communication skills. In addition to a clear moral compass, strong work ethic and his quest for excellence, Ishant has a great sense of humour.
+                        </div>
+                        <div class="recommendation-author">Mark Bonner B.Sc. M.Sc. PMP</div>
+                        <div class="recommendation-position">Teacher, Community Advocate, Project Artist</div>
+                    </div>
+                    
+                    <div class="recommendation-card">
+                        <div class="recommendation-text">
+                            Ishant is a dedicated and capable person who would be an awesome asset to any organization. I've been impressed at how he engages himself deeply in the work that he does and is successful at what he puts his mind to. I am happy to recommend him.
+                        </div>
+                        <div class="recommendation-author">Chris Spraakman</div>
+                        <div class="recommendation-position">Professor, Business Analysis and Analytics, Mohawk College</div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <div class="dot active" onclick="currentSlide(1)"></div>
+                    <div class="dot" onclick="currentSlide(2)"></div>
+                    <div class="dot" onclick="currentSlide(3)"></div>
+                    <div class="dot" onclick="currentSlide(4)"></div>
+                    <div class="dot" onclick="currentSlide(5)"></div>
+                    <div class="dot" onclick="currentSlide(6)"></div>
+                    <div class="dot" onclick="currentSlide(7)"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section certifications">
+            <h2>Certifications & Credentials</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🎯</div>
+                    <div class="cert-title">Enterprise Design Thinking Practitioner</div>
+                    <div class="cert-org">IBM - 2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📋</div>
+                    <div class="cert-title">PMI Project Management Ready™</div>
+                    <div class="cert-org">PMI - 2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">💼</div>
+                    <div class="cert-title">Career Essentials in Project Management</div>
+                    <div class="cert-org">Microsoft & LinkedIn - 2024</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📊</div>
+                    <div class="cert-title">Power BI Training</div>
+                    <div class="cert-org">Microsoft Certified</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm always interested in discussing new opportunities, innovative RPA projects, and ways to drive 
+                    business transformation through strategic project management and automation solutions.
+                </p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>ishanttyagi72@gmail.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <h3>Location</h3>
+                        <p>Hamilton, Ontario, Canada</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ishant-tyagi" class="social-link" title="LinkedIn">💼</a>
+                    <a href="mailto:ishanttyagi72@gmail.com" class="social-link" title="Email">📧</a>
+                    <a href="https://github.com/ishant-tyagi" class="social-link" title="GitHub">💻</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ishant Tyagi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Recommendations Slider
+        let slideIndex = 1;
+        let slideInterval;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("recommendation-card");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active", "prev");
+                if (i < slideIndex - 1) {
+                    slides[i].classList.add("prev");
+                }
+            }
+            
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            dots[slideIndex - 1].classList.add("active");
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            slideIndex = n;
+            showSlides(slideIndex);
+            startSlideShow();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // File download functionality
+        function downloadFile(fileType) {
+            // Replace these URLs with your actual file URLs hosted on GitHub or cloud storage
+            const fileUrls = {
+                'resume': '#', // Add your resume URL here
+                'travelport-presentation': '#', // Add Travel Port PPT URL
+                'travelport-case-study': '#', // Add case study PDF URL
+                'transit-report': '#', // Add transit analysis PDF URL
+                'transit-analysis': '#', // Add transit analysis URL
+                'scheduling-docs': '#', // Add scheduling framework docs URL
+                'scheduling-framework': '#', // Add scheduling project URL
+                'head-presentation': '#', // Add HEAD competition PPT URL
+                'head-competition': '#', // Add HEAD competition URL
+                'certifications': '#' // Add certifications PDF URL
+            };
+            
+            if (fileUrls[fileType] && fileUrls[fileType] !== '#') {
+                window.open(fileUrls[fileType], '_blank');
+            } else {
+                // Show a professional message with contact info
+                const fileNames = {
+                    'resume': 'Resume',
+                    'travelport-presentation': 'Travel Port Project Presentation',
+                    'travelport-case-study': 'Travel Port Case Study',
+                    'transit-report': 'Hamilton Transit Analysis Report',
+                    'transit-analysis': 'Transit System Analysis',
+                    'scheduling-docs': 'Scheduling Framework Documentation',
+                    'scheduling-framework': 'Mohawk College Scheduling Project',
+                    'head-presentation': 'HEAD Data Competition Presentation',
+                    'head-competition': 'HEAD Competition Project',
+                    'certifications': 'Professional Certifications'
+                };
+                
+                alert(`${fileNames[fileType] || 'Document'} - Please contact me directly at ishanttyagi72@gmail.com or connect with me on LinkedIn for access to this document.`);
+            }
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in effect
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+
+        // Mobile menu toggle (if needed)
+        const nav = document.querySelector('nav');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect on page load
+        window.addEventListener('load', function() {
+            const heroTitle = document.querySelector('.hero h1');
+            const originalText = heroTitle.textContent;
+            typeWriter(heroTitle, originalText, 80);
+        });
+
+        // Add counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isPercentage = target.includes('%');
+                const isPlus = target.includes('+');
+                const numericValue = parseInt(target.replace(/\D/g, ''));
+                
+                let current = 0;
+                const increment = numericValue / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= numericValue) {
+                        current = numericValue;
+                        clearInterval(timer);
+                    }
+                    
+                    let displayValue = Math.floor(current);
+                    if (isPercentage) displayValue += '%';
+                    if (isPlus) displayValue += '+';
+                    
+                    counter.textContent = displayValue;
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            statsObserver.observe(heroStats);
+        }
+
+        // Initialize slider
+        document.addEventListener('DOMContentLoaded', function() {
+            showSlides(slideIndex);
+            startSlideShow();
+        });
+    </script>
+</body>
+</html>
